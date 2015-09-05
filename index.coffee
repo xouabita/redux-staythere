@@ -10,7 +10,7 @@ module.exports = stayThere = (sessionId) ->
       if initialState then initialState
       else JSON.parse localStorage.getItem(sessionId)
 
-    nextStore = next reducer, initialState
+    nextStore = next reducer, finalState
 
     customDispatch = (action) ->
       nextStore.dispatch action
