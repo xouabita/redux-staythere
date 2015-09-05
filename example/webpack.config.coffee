@@ -10,11 +10,15 @@ module.exports =
     filename: "app.js"
   resolve:
     moduleDirectories: ['node_modules']
-    extensions: ['', '.webpack.js', '.web.js', '.js', '.coffee']
+    extensions: ['', '.coffee', '.webpack.js', '.web.js', '.js']
   module:
     loaders: [
-      test: /\.coffee$/
+      test: /app\.coffee$/
       loaders: ["react-hot", "coffee", "cjsx"]
+      exclude: "node_modules"
+    ,
+      test: /index\.coffee$/
+      loaders: ["coffee"]
       exclude: "node_modules"
     ]
   devtool: "eval-source-map"
