@@ -2,7 +2,6 @@ module.exports =
 
   entry:
     app: [
-      "webpack/hot/dev-server"
       "./app.coffee"
     ]
   output:
