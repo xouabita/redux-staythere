@@ -5,11 +5,22 @@
   "main": "index.js",
   "scripts": {
     "build": "coffee -c index.coffee",
-    "watch": "coffee -w index.coffee"
+    "build:example": "cd example && webpack",
+    "watch": "coffee -w index.coffee",
+    "watch:example": "npm watch & cd example && webpack-dev-server --config webpack.config.hot.coffee",
+    "test:do_mocha": "mocha --compilers coffee:coffee-script/register --harmony --include co-mocha tests.coffee",
+    "test": "npm run build:example && npm run test:do_mocha"
   },
   "author": "xouabita",
   "license": "ISC",
   "dependencies": {
     "object-assign": "^4.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "co-mocha": "^1.1.2",
+    "coffee-script": "^1.10.0",
+    "mocha": "^2.3.0",
+    "nightmare": "segmentio/nightmare#f1abbd58cb8498054df85cf7c55c6e27772de134"
   }
 }
