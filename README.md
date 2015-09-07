@@ -19,4 +19,4 @@ And you are all done :smile:
 
 
 You can also check the [demo](http://xouabita.github.io/redux-staythere/example/). Don't forget to reload,
-to see the magical :tophat:
+to see the magic. :tophat:
