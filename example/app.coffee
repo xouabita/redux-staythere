@@ -19,10 +19,10 @@ class App extends Component
 
   render: ->
     <div>
-      <button onClick={ => @props.dispatch type: 'DECREMENT' }>--</button>
-      <button onClick={ => @props.dispatch type: 'INCREMENT' }>++</button>
+      <button id="minus" onClick={ => @props.dispatch type: 'DECREMENT' }>--</button>
+      <button id="plus" onClick={ => @props.dispatch type: 'INCREMENT' }>++</button>
       <br/>
-      <p>Counter: {@props.counter}</p>
+      <p>Counter: <span id="value">{@props.counter}</span></p>
     </div>
 
 AppContainer = connect((state) -> counter: state) App
